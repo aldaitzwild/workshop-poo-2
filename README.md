@@ -20,7 +20,7 @@ le fichier *public/index.php* contient déjà pas mal de code. La partie du fich
  
 ✅ Dans cette zone "autorisée" tu vois qu'il y a déjà deux instances d'objets Fighter, tu retrouves Héraclès ainsi que le sanglier (`$boar`).
  
-Dans le fichier *Fighter.php*, une petite modification a également été apportée afin de gérer des images pour tes combattants. Un 4ème paramètre `$image` est ajouté au `__construct()`, avec une image par défaut si tu n'en renseigne pas à l'instanciation. 
+Dans le fichier *Fighter.php*, une petite modification a également été apportée afin de gérer des images pour tes combattants. Un 4ème paramètre `$image` est ajouté au `__construct()`, avec une image par défaut si tu n'en renseignes pas à l'instanciation. 
  
 Quand tu ouvres http://localhost:8000 sur ton navigateur, tu dois voir cette image par défaut pour les deux combattants, ainsi que le déroulé du combat. Le code repris sur cette page est très proche de celui du *cli.php*, à quelques ajustements de mise en forme près. Tu vois ici que le code de ta classe `Fighter` s'adapte parfaitement à des utilisations différentes (terminal ou page web).
  
@@ -38,7 +38,7 @@ Les images devraient s'actualiser en conséquence dans ton navigateur puisque la
  
 ## Un peu d'équipement pour attaquer
  
-Les caractéristiques de force et de dextérité du sanglier sont bien supérieures aux tiennes, impossible de le battre dans ces conditions, tes poings ne suffiront pas ! Il va falloir que tu t'équipes en conséquences ! 
+Les caractéristiques de force et de dextérité du sanglier sont bien supérieures aux tiennes, impossible de le battre dans ces conditions, tes poings ne suffiront pas ! Il va falloir que tu t'équipes en conséquence ! 
  
 Si tu cliques sur l'image d'Héraclès, tu verras qu'une fenêtre modale s'ouvre. Mis à part ton image et ton nom, cette dernière est bien vide pour le moment, mais affichera à terme ton équipement et tes caractéristiques (attaque, défense, vie...)
  
@@ -46,9 +46,9 @@ Tout d'abord, il va falloir t'ajouter une épée.
  
 1. Créé une nouvelle classe `Weapon` dans le dossier *src/*.
 2. Celle-ci va correspondre à l'arme que tu vas équiper. Elle doit avoir une propriété `$damage`, de type integer, et initialisée à 10.
-3. Ajoute une propriété image initialisé avec 'sword.svg'. 
+3. Ajoute une propriété image initialisée avec 'sword.svg'. 
 
-4. Créé également les *getter* et *setter* correspondants. Pour le `getImage()` (comme pour `Fighter`), fait en sorte de concaténer la chaîne retournée avec 'assets/images/' pour renvoyer le chemin complet vers l'image.
+4. Créé également les *getter* et *setter* correspondants. Pour le `getImage()` (comme pour `Fighter`), fais en sorte de concaténer la chaîne retournée avec 'assets/images/' pour renvoyer le chemin complet vers l'image.
  
 5. Pour ajouter l'arme au personnage, dans la classe `Fighter`, on crée une propriété `$weapon`. Celle-ci sera cette fois-ci typée avec  `?Weapon`, c'est-à-dire que la valeur assignée à cette propriété devra être un objet, instance de la classe `Weapon`, ou `null` (c'est à cela que sert le point d'interrogation). Par défaut, la propriété sera initialisée à `null`. 
 
